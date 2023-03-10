@@ -1204,7 +1204,6 @@
   }
 
   #main .logo {
-    display: none;
     float: left;
     margin: 0px 0 0 0;
     width: 23%;
@@ -1213,6 +1212,7 @@
     line-height: 50px;
     font-size: 25px;
     color: #fff;
+    display: none;
   }
 
   #main .nav {
@@ -1372,7 +1372,7 @@
   }
 
   #profile .timeline {
-    margin-top: 1vh;
+    margin-top: 20px;
     margin-left: 5%;
     padding: 10px;
     box-sizing: border-box;

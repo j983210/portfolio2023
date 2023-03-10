@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오 - 프론트엔드 개발자 전승우</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <!------------------------------------------ MAIN --------------------------------------------------->
+      <div id="main" class="contents">
+        <div class="in_main">
+          <div class="header on">
+            <h1 class="logo">J·S·W</h1>
+            <ul class="nav">
+              <li class="on"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Skill</a></li>
+              <li><a href="#">project</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </div>
+          <div class="newHeader">
+            <h1 class="logo">J·S·W</h1>
+            <ul class="nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Skill</a></li>
+              <li><a href="#">project</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </div>
+          <div class="main_text_box">
+            <h2>Hello, I'm <span>Jun Seung Woo</span></h2>
+            <p>UX Designer & Front End Developer</p>
+          </div>
+        </div>
+      </div>
+      <!------------------------------------------ PROFILE ------------------------------------------------>
+      <div id="profile" class="contents">
+        <div class="deco_line_up"></div>
+        <div class="profile_deco"></div>
+        <div class="in_profile">
+          <div class="profile_text_box">
+            <h2 class="subttl">PROFILE</h2>
+            <div class="profile_ttl">
+              <h2>전승우</h2>
+              <ul>
+                <li>Port</li>
+                <li>Fo</li>
+                <li>Lio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="profile_txt">
+              <p>
+                항상 지금보다 조금더 나은 개발을 하기 위해 꾸준히 공부하는
+                개발자가 되려고 노력하고 있습니다.
+              </p>
+            </div>
+            <h3>TimeLine</h3>
+            <ul>
+              <li>부산대학교 전기과 졸업</li>
+              <li>2022.10.13 ~ 2023.03.10 코리아 IT 아카데미 부산점 수강</li>
+            </ul>
+          </div>
+        </div>
+        <div class="deco_line_down"></div>
+      </div>
+      <!------------------------------------------ SKILL -------------------------------------------------->
+      <div id="skill" class="contents">
+        <div class="deco_line_up"></div>
+        <div class="in_skill">
+          <div class="skill_text_box">
+            <h2 class="subttl">SKILL</h2>
+          </div>
+          <ul class="skill_list">
+            <li>
+              <h5>html</h5>
+              <div>
+                <div class="in_box in_box01">80%</div>
+              </div>
+            </li>
+            <li>
+              <h5>css</h5>
+              <div>
+                <div class="in_box in_box02">80%</div>
+              </div>
+            </li>
+            <li>
+              <h5>jQuery</h5>
+              <div>
+                <div class="in_box in_box03">70%</div>
+              </div>
+            </li>
+            <li>
+              <h5>node.js</h5>
+              <div>
+                <div class="in_box in_box04">50%</div>
+              </div>
+            </li>
+            <li>
+              <h5>React</h5>
+              <div>
+                <div class="in_box in_box05">60%</div>
+              </div>
+            </li>
+          </ul>
+          <div class="my_skill">
+            <p class="skill_btn">
+              <b>HTML</b> <span class="colon">:</span>
+              <span class="my_skill_text"
+                >원하는 페이지의 구성을 위해 여러 태그들을 상황에 맞게 적절히
+                사용할 수 있습니다.</span
+              >
+            </p>
+            <p class="skill_btn">
+              <b>CSS</b> <span class="colon">:</span>
+              <span class="my_skill_text"
+                >계획한 대로 마크업을 할 수 있으며, 'media query'를 사용하여
+                반응형 웹 페이지를 만들 수 있습니다.</span
+              >
+            </p>
+            <p class="skill_btn">
+              <b>JQUERY</b> <span class="colon">:</span>
+              <span class="my_skill_text"
+                >jQuery를 사용하여 이미지 슬라이드나 메뉴 풀다운과 같은
+                애니메이션 효과를 줄 수 있습니다.</span
+              >
+            </p>
+            <p class="skill_btn">
+              <b>NODE.JS</b> <span class="colon">:</span>
+              <span class="my_skill_text"></span>
+            </p>
+            <p class="skill_btn">
+              <b>REACT</b> <span class="colon">:</span>
+              <span class="my_skill_text"
+                >React로 웹 페이지를 만들고 부트스트랩을 사용하여 여러 기능을
+                만들 수 있습니다.</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="deco_line_down"></div>
+        <script>
+          $(function () {
+            let scene01Num = 1;
+
+            $(window).scroll(function () {
+              let scrollTop = $(document).scrollTop();
+              let windowHeight = $(window).height();
+
+              if (scrollTop >= 2 * windowHeight && scene01Num == 1) {
+                scene01Num = 0;
+                $("#skill .in_box01")
+                  .stop()
+                  .delay(0)
+                  .css({ left: "-100%" })
+                  .animate({ left: "-20%" }, 1000);
+                $("#skill .in_box02")
+                  .stop()
+                  .delay(300)
+                  .css({ left: "-100%" })
+                  .animate({ left: "-20%" }, 1000);
+                $("#skill .in_box03")
+                  .stop()
+                  .delay(600)
+                  .css({ left: "-100%" })
+                  .animate({ left: "-30%" }, 1000);
+                $("#skill .in_box04")
+                  .stop()
+                  .delay(900)
+                  .css({ left: "-100%" })
+                  .animate({ left: "-50%" }, 1000);
+                $("#skill .in_box05")
+                  .stop()
+                  .delay(1200)
+                  .css({ left: "-100%" })
+                  .animate({ left: "-40%" }, 1000);
+              } else if (scrollTop < 2 * windowHeight && scene01Num == 0) {
+                scene01Num = 1;
+                $("#skill .in_box01")
+                  .stop()
+                  .css({ left: "-20%" })
+                  .animate({ left: "-100%" }, 1000);
+                $("#skill .in_box02")
+                  .stop()
+                  .css({ left: "-20%" })
+                  .animate({ left: "-100%" }, 1000);
+                $("#skill .in_box03")
+                  .stop()
+                  .css({ left: "-30%" })
+                  .animate({ left: "-100%" }, 1000);
+                $("#skill .in_box04")
+                  .stop()
+                  .css({ left: "-50%" })
+                  .animate({ left: "-100%" }, 1000);
+                $("#skill .in_box05")
+                  .stop()
+                  .css({ left: "-40%" })
+                  .animate({ left: "-100%" }, 1000);
+              }
+            });
+          });
+        </script>
+      </div>
+      <!------------------------------------------ PROJECT ----------------------------------------------->
+      <div id="project_1" class="contents">
+        <div class="deco_line_up"></div>
+        <div class="in_project_1">
+          <div class="project_text_box">
+            <h2 class="subttl">PROJECT</h2>
+          </div>
+          <ul class="list">
+            <li class="output">
+              <div>
+                <img src="./images/portfolio.png" alt="" />
+              </div>
+            </li>
+            <li class="account">
+              <h3>프로젝트명 : 대한항공 홈페이지 리뉴얼(포트폴리오용)</h3>
+              <p>작업기간 : 3주</p>
+              <p>
+                작업요점 :
+                <span> React를 사용하여 작업을 했습니다.<br /> </span>
+              </p>
+              <p>사용기술 : HTML, CSS, React</p>
+              <div>
+                <a
+                  href="https://renewal-site-frontend10-jsw.netlify.app"
+                  target="_blank"
+                  >결과물보기</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="deco_line_down"></div>
+      </div>
+      <!------------------------------------------ CONTACT ------------------------------------------------->
+      <div id="contact" class="contents">
+        <div class="deco_line_up"></div>
+        <div class="in_contact">
+          <div class="contact_text_box">
+            <h2 class="subttl">CONTACT</h2>
+            <p>메일을 보내주세요~~</p>
+          </div>
+          <div class="form_box">
+            <form id="form" class="input_box">
+              <div class="field">
+                <label for="from_name">from_name</label>
+                <input
+                  type="text"
+                  name="from_name"
+                  id="from_name"
+                  placeholder="보내는 이"
+                />
+              </div>
+              <div class="field">
+                <label for="to_name">to_name</label>
+                <input type="text" name="to_name" id="to_name" value="전승우" />
+              </div>
+              <div class="field">
+                <label for="message">message</label>
+                <input
+                  type="text"
+                  name="message"
+                  id="message"
+                  placeholder="전하고 싶은 말"
+                />
+              </div>
+              <div class="field">
+                <label for="tell">tel</label>
+                <input
+                  type="text"
+                  name="tell"
+                  id="tell"
+                  placeholder="010-0000-0000"
+                />
+              </div>
+              <div class="field">
+                <label for="reply_to">reply_to</label>
+                <input
+                  type="text"
+                  name="reply_to"
+                  id="reply_to"
+                  placeholder="메일 주소"
+                />
+              </div>
+
+              <input type="submit" id="button" value="Send Email" />
+            </form>
+
+            <!-- <a href="https://.pngtree.com/so/안드로이드"
+              >안드로이드 png에서 .pngtree.com/</a
+            >
+            <a href="https://.pngtree.com/so/빈">빈 png에서 .pngtree.com/</a> -->
+
+            <script
+              type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+            ></script>
+
+            <script type="text/javascript">
+              emailjs.init("4TGkU5JuYKb793So6");
+
+              const btn = document.getElementById("button");
+
+              document
+                .getElementById("form")
+                .addEventListener("submit", function (event) {
+                  event.preventDefault();
+
+                  btn.value = "Sending...";
+
+                  const serviceID = "service_zy8sgpf";
+                  const templateID = "template_dt7olgb";
+
+                  emailjs.sendForm(serviceID, templateID, this).then(
+                    () => {
+                      btn.value = "Send Email";
+                      alert("메일보내기 성공");
+                    },
+                    (err) => {
+                      btn.value = "Send Email";
+                      alert(JSON.stringify(err));
+                    }
+                  );
+                });
+            </script>
+          </div>
+        </div>
+        <div class="deco_line_down"></div>
+      </div>
+    </div>
+    <!----------------------------------------- QUICK_MENU ---------------------------------------------->
+    <div id="q_mn">Menu</div>
+    <script>
+      $(document).ready(function () {
+        let windowHeight = $(window).height();
+
+        $(window).scroll(function () {
+          var windowTop = $(window).scrollTop() + windowHeight / 2;
+          $("#q_mn")
+            .stop()
+            .animate({ top: windowTop + "px" }, 300);
+        });
+      });
+    </script>
+    <!----------------------------------------- QUICK_MENU ---------------------------------------------->
+  </body>
+</html>

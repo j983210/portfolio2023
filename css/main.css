@@ -151,6 +151,7 @@
   border: 5px solid #4460aa;
   background-color: #fff;
   cursor: pointer;
+  display: none;
 }
 
 /*---------------------------------------- PROFILE ---------------------------------------------------*/
@@ -736,6 +737,7 @@
     border: 5px solid #4460aa;
     background-color: #fff;
     cursor: pointer;
+    display: none;
   }
 
   /*---------------------------------------- PROFILE ---------------------------------------------------*/
@@ -1327,6 +1329,7 @@
     border: 5px solid #4460aa;
     background-color: #fff;
     cursor: pointer;
+    display: none;
   }
 
   /*---------------------------------------- PROFILE ---------------------------------------------------*/
@@ -1894,6 +1897,7 @@
     border: 5px solid #4460aa;
     background-color: #fff;
     cursor: pointer;
+    display: none;
   }
 
   /*---------------------------------------- PROFILE ---------------------------------------------------*/

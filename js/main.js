@@ -1,11 +1,10 @@
 $(document).ready(function () {
-  let menu = $(".nav > li");
-  let contents = $("#wrap > div");
   let quickMenu = $("#q_mn");
   let header = $(".header");
   let newHeader = $(".newHeader");
-  let main = $('#main');
-  let skillBtn = $('.skill_btn');
+  let main = $("#main");
+  let profile = $("#profile");
+  let skillBtn = $(".skill_btn");
 
   let count = 0;
 
@@ -41,11 +40,18 @@ $(document).ready(function () {
     $(".contents").each(function () {
       let tg = $(this);
       let i = tg.index();
-      if (tg.offset().top <= sct) {
+      if (tg.offset().top <= sct + 1) {
         $(".newHeader > ul > li").removeClass("on");
         $(".newHeader > ul > li").eq(i).addClass("on");
       }
     });
+
+    // 메인화면을 지났을 때 퀵 메뉴가 나타나게 하기
+    if (profile.offset().top > sct) {
+      quickMenu.css({ display: "none" });
+    } else {
+      quickMenu.css({ display: "block" });
+    }
   });
 
   // 퀵 메뉴 클릭 시 상단 메뉴바 나타내기
@@ -72,15 +78,22 @@ $(document).ready(function () {
   });
 
   // 모바일 버전에서 skill_btn 요소 클릭 시 하단에 내용 나타나게 하기
-  skillBtn.click(function (e) {
-    e.preventDefault();
+  // 반응형(max-width: 480px)에서 실행 되도록 하기
+  $(window)
+    .resize(function () {
+      if (window.innerWidth <= 480) {
+        skillBtn.click(function (e) {
+          e.preventDefault();
 
-    // 같은 버튼을 클릭하면 하단 내용 다시 사라지게 하기
-    if ($(this).children('.my_skill_text').css('display') == 'block') {
-      $(this).children('.my_skill_text').css({ display: 'none' });
-    } else {
-      skillBtn.children('.my_skill_text').css({ display: 'none' });
-      $(this).children('.my_skill_text').css({ display: 'block' });
-    }
-  });
+          // 같은 버튼을 클릭하면 하단 내용 다시 사라지게 하기
+          if ($(this).children(".my_skill_text").css("display") == "block") {
+            $(this).children(".my_skill_text").css({ display: "none" });
+          } else {
+            skillBtn.children(".my_skill_text").css({ display: "none" });
+            $(this).children(".my_skill_text").css({ display: "block" });
+          }
+        });
+      }
+    })
+    .resize();
 });

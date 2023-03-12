@@ -137,7 +137,10 @@
             </p>
             <p class="skill_btn">
               <b>NODE.JS</b> <span class="colon">:</span>
-              <span class="my_skill_text"></span>
+              <span class="my_skill_text">
+                node.js의 기본을 공부하고 제대로 사용하기 위해 공부하고
+                있습니다.
+              </span>
             </p>
             <p class="skill_btn">
               <b>REACT</b> <span class="colon">:</span>
@@ -226,12 +229,20 @@
             </li>
             <li class="account">
               <h3>프로젝트명 : 대한항공 홈페이지 리뉴얼(포트폴리오용)</h3>
-              <p>작업기간 : 3주</p>
+              <p><b>- 작업기간</b> : 3주</p>
               <p>
-                작업요점 :
-                <span> React를 사용하여 작업을 했습니다.<br /> </span>
+                <b>- 작업요점</b> :
+                <span>
+                  React를 사용하여 작업을 진행 했습니다. 프로젝트를 진행하면서
+                  기능을 구현하기 위해 스스로 코딩을 해보았고, Route & Link 를
+                  어떻게 사용해야 잘 연결이 될지 이해하게 되었습니다. 그리고
+                  Styled-Components를 사용하여 메뉴바의 풀다운 기능과 버튼을
+                  클릭했을 때 해당 버튼의 스타일을 변경하는 기능을 넣어봤습니다.
+                  또 props를 사용하여 코딩을 하는 것을 좀 더 이해하게
+                  되었습니다.
+                </span>
               </p>
-              <p>사용기술 : HTML, CSS, React</p>
+              <p><b>- 사용기술</b> : HTML, CSS, React</p>
               <div>
                 <a
                   href="https://renewal-site-frontend10-jsw.netlify.app"
@@ -343,15 +354,28 @@
     <!----------------------------------------- QUICK_MENU ---------------------------------------------->
     <div id="q_mn">Menu</div>
     <script>
-      $(document).ready(function () {
+      $(function () {
         let windowHeight = $(window).height();
 
-        $(window).scroll(function () {
-          var windowTop = $(window).scrollTop() + windowHeight / 2;
-          $("#q_mn")
-            .stop()
-            .animate({ top: windowTop + "px" }, 300);
-        });
+        $(window)
+          .resize(function () {
+            if (window.innerWidth > 480) {
+              $(window).scroll(function () {
+                let windowTop = $(window).scrollTop() + windowHeight / 2;
+                $("#q_mn")
+                  .stop()
+                  .animate({ top: windowTop + "px" }, 500);
+              });
+            } else {
+              $(window).scroll(function () {
+                let windowTop = $(window).scrollTop() + windowHeight / 10;
+                $("#q_mn")
+                  .stop()
+                  .animate({ top: windowTop + "px" }, 500);
+              });
+            }
+          })
+          .resize();
       });
     </script>
     <!----------------------------------------- QUICK_MENU ---------------------------------------------->

@@ -80,6 +80,7 @@ $(document).ready(function () {
   // 모바일 버전에서 skill_btn 요소 클릭 시 하단에 내용 나타나게 하기
   // 반응형(max-width: 480px)에서 실행 되도록 하기
   // $(window).resize(function () {});
+  // -> resize를 사용하니 화면 위치에 따라 이벤트가 작동하지 않는 상황이 발생
   if (window.innerWidth <= 480) {
     skillBtn.click(function (e) {
       e.preventDefault();
